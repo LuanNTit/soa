@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <div id="account">
+        <div id="left_content" class="account_menu">
+            <div id="box_id_left">
+                <div id="title_left_content">
+                    <p class="account_name">
+                        <img src="https://hoangsaviet.com.vn/datafiles/avatar/thumb_1705723605_9039_tai-xuong.jpg" alt="Nguyễn Trần Luân" title="Nguyễn Trần Luân" width="100" height="auto"> Nguyễn Trần Luân
+                    </p>
+                </div>
+                <div id="menu_left">
+                    <ul class="active">
+                        <li class="cata_name"><a href="https://hoangsaviet.com.vn/Nguyen-Tran-Luan.1000107/tai-khoan"><i class="fa fa-user rong16 marginright5 color2" aria-hidden="true"></i> Thông tin tài khoản</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="https://hoangsaviet.com.vn/Nguyen-Tran-Luan.1000107/quan-ly-don-hang"><i class="fa fa-shopping-cart rong16 marginright5 color2" aria-hidden="true"></i> Quản lý đơn hàng</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="https://hoangsaviet.com.vn/Nguyen-Tran-Luan.1000107/ma-giam-gia-thanh-vien"><i class="fa fa-barcode rong16 marginright5 color2" aria-hidden="true"></i> Mã Giảm Giá<span class="thongbao"></span></a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="https://hoangsaviet.com.vn/san-pham-da-xem"><i class="fa fa-eye rong16 marginright5 color2" aria-hidden="true"></i> Sản phẩm đã xem</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="https://hoangsaviet.com.vn/Nguyen-Tran-Luan.1000107/san-pham-da-mua"><i class="fa fa-usd marginright5 rong16 color2"></i> Sản phẩm đã mua</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="https://hoangsaviet.com.vn/Nguyen-Tran-Luan.1000107/lich-su-thanh-vien"><i class="fa fa-file rong16 marginright5 color2" aria-hidden="true"></i> Lịch sử thành viên</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="https://hoangsaviet.com.vn/dang-xuat"><i class="fa fa-power-off rong16 marginright5 color2" aria-hidden="true"></i> Đăng xuất</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="right_content">
+            <!-- Nội dung trang -->
+            <p>Đây là nội dung trang tài khoản.</p>
+        </div>
+        <div class="clr"></div>
+    </div>
+    
+    {% endblock %}
+</body>
+</html>

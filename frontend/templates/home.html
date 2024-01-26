@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    {% block slider %}
+    <!-- Xây dựng slider -->
+    <div id="slider">
+        <div class="text-content">
+            <h2 class="text-heading">CHO THUÊ ÂM THANH - ÁNH SÁNG- MÀN HÌNH LED</h2>
+            <h2>GỌI NGAY: HSV EVENT</h2>
+            <!-- <div class="text-desription"><marquee width="1200px" behavior="alternate"> Kênh thông tin chia sẻ nguồn nhân lực chất lượng tại Việt Nam</marquee> </div> -->
+        </div>
+    </div>
+    <!-- End Xây dựng slider -->
+    {% endblock %}
+    {% block content %}
+    <!-- Content -->
+    <div id="content">
+        <!-- About -->
+        <div id="band" class="content-section">
+            <h2 class="section-heading">Giới Thiệu</h2>
+            <p class="section-sub-heading">Nguồn nhân lực</p>
+            <p class="about-text">Nguồn nhân lực là những người tạo nên lực lượng lao động của một tổ chức, lĩnh vực
+                kinh doanh hoặc nền kinh tế. " Vốn con người " đôi khi được sử dụng đồng nghĩa với "nguồn nhân lực",
+                mặc dù vốn con người thường đề cập đến hiệu ứng hẹp hơn (nghĩa là kiến thức mà các cá nhân thể hiện
+                và tăng trưởng kinh tế). Tương tự, các thuật ngữ khác đôi khi được sử dụng bao gồm nhân lực, tài
+                năng, lao động, nhân sự hoặc đơn giản là con người.
+            </p>
+            <div class="row members-list">
+                <div class="mobile-item  colum colum-three text-center">
+                    <p class="member-name">Nhân Sự</p>
+                    <img src="https://huongnghiep40.vn/wp-content/uploads/2020/05/huong-nghiep-40-chuyen-vien-phat-trien-nguon-nhan-luc-1-1-1400x788.jpg"
+                        alt="MTP" class="member-img">
+                </div>
+
+                <div class="mobile-item colum colum-three text-center">
+                    <p class="member-name">Lao Động</p>
+                    <img src="https://luanvan99.com/files/assets/giai_phap_phat_trien_nguon_nhan_luc.jpg" alt="MTP"
+                        class="member-img">
+                </div>
+
+                <div class="mobile-item colum colum-three text-center">
+                    <p class="member-name">Tài Năng</p>
+                    <img src="https://giaiphaptinhhoa.com/wp-content/uploads/2020/02/image2.jpg" alt="MTP"
+                        class="member-img">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- End About -->
+
+        <!-- Tour -->
+        <div id="tour" class="tour-section">
+            <div class="content-section">
+                <h2 class="section-heading text-white">DỊCH VỤ NỔI BẬT</h2>
+                <p class="section-sub-heading text-white">Công ty chuyên cho thuê âm thanh, ánh sáng, màn hình led
+                    sự kiện</p>
+                <!-- <ul class="ticket-list">
+                            <li>September <span class="sold-out">Sold out</span></li>
+                            <li>October <span class="sold-out">Sold out</span></li>
+                            <li>November <span class="quantity">3</span></li>
+                        </ul> -->
+
+                <!-- Places Địa điểm -->
+
+                <div class="places-list">
+                    <a href="Cntt.html">
+                        <div class="colum colum-three s-colum-full mt-16">
+                            <img src="https://hoangsaviet.com.vn/datafiles/banners/1691071026_6713_to-chuc-su-kien.webp"
+                                alt="New York" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">TỔ CHỨC SỰ KIỆN</h3>
+                                <!-- <p class="place-time">Fri 05 Nov 2017</p> -->
+                                <!-- <div class="place-desc">Dựa trên Báo cáo về thị trường IT Việt Nam 2021 hiện nay của TopDev, tính  đến năm 2025 Việt Nam sẽ còn cần đến 450.000  nhân lực trong ngành công nghệ thông tin.</div> -->
+                                <!-- <button href="#" class="btn js-buy-ticket s-full-width ">Buy Tickets</button> -->
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="colum colum-three s-colum-full mt-16">
+                        <img src="https://hoangsaviet.com.vn/datafiles/banners/1691372554_2154_am-thanh-anh-sang.webp"
+                            alt="Paris" class="place-img">
+                        <div class="place-body">
+                            <h3 class="place-heading">ÂM THANH ÁNH SÁNG</h3>
+                            <!-- <p class="place-time">Fri 09 Nov 2021</p> -->
+                            <!-- <div class="place-desc">Việt Nam sẽ có khoảng 2,5 triệu lao động làm trong ngành du lịch, mang lại doanh thu khoảng 35 tỷ USD. Tuy nhiên khó khăn hiện nay là thiếu lao động Việt Nam lành nghề.  </div> -->
+                            <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                        </div>
+                    </div>
+
+                    <div class="colum colum-three s-colum-full mt-16">
+                        <img src="https://hoangsaviet.com.vn/datafiles/banners/1691070991_1678_man-hinh-led.webp"
+                            alt="Viet Nam" class="place-img">
+                        <div class="place-body">
+                            <h3 class="place-heading">MÀN HÌNH LED</h3>
+                            <!-- <p class="place-time">Fri 05 Nov 2017</p> -->
+                            <!-- <div class="place-desc"> Ngành Kỹ thuật xây dựng đang thu hút sự quan của nhiều bạn trẻ trong thời gian gần đây. Bài viết sẽ giới thiệu đến các bạn những thông tin tổng quan về ngành học thú vị này.</div> -->
+                            <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                        </div>
+                    </div>
+
+                    <div class="colum colum-three s-colum-full mt-16">
+                        <img src="https://hoangsaviet.com.vn/datafiles/banners/1691071155_5532_thiet-bi-to-chuc-su-kien_page-0001.webp"
+                            alt="Paris" class="place-img">
+                        <div class="place-body">
+                            <h3 class="place-heading">THIẾT BỊ SỰ KIỆN</h3>
+                            <!-- <p class="place-time">Fri 09 Nov 2021</p> -->
+                            <!-- <div class="place-desc">Ngành toán kinh tế ra đời để đáp ứng nhu cầu nhân lực cho yếu tố dữ liệu lớn (Big Data) của cách mạng công nghiệp 4.0. Phó thủ tướng Vũ Đức Đam nhận định cách mạng công nghiệp lần thứ 4 tạo ra nguy cơ mất lao động. </div> -->
+                            <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                        </div>
+                    </div>
+
+                    <div class="colum colum-three s-colum-full mt-16">
+                        <img src="https://hoangsaviet.com.vn/datafiles/banners/1691070782_8877_san-khau-1.webp"
+                            alt="Paris" class="place-img">
+                        <div class="place-body">
+                            <h3 class="place-heading">SÂN KHẤU LẮP GHÉP</h3>
+                            <!-- <p class="place-time">Fri 09 Nov 2021</p> -->
+                            <!-- <div class="place-desc">Trong phát triển ngành y tế, bên cạnh việc xây dựng khung khổ pháp lý thống nhất; xây dựng mạng lưới y tế ; đầu tư nguồn lực tài chính một cách thỏa đáng để ngành y tế có thể làm tốt việc chăm sóc sức khỏe cộng đồng </div> -->
+                            <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                        </div>
+                    </div>
+
+                    <div class="colum colum-three s-colum-full mt-16">
+                        <img src="https://hoangsaviet.com.vn/datafiles/banners/1696825956_4218_tin-tuc-2.webp"
+                            alt="Paris" class="place-img">
+                        <div class="place-body">
+                            <h3 class="place-heading">TIN TỨC SỰ KIỆN</h3>
+                            <!-- <p class="place-time">Fri 09 Nov 2021</p> -->
+                            <!-- <div class="place-desc">Nhu cầu lao động trong ngành marketing tại Việt Nam đang tăng mạnh trong thời kỳ cách mạng công nghệ 4.0. Bởi vậy, hiện nay ngành marketing là một trong những ngành nghề đang thiếu hụt nhân lực hiện nay</div> -->
+                            <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                        </div>
+                    </div>
+
+
+
+                    <div class="clear"></div>
+                </div>
+
+
+
+                <!-- End Places Địa điểm -->
+            </div>
+            <div id="tour1" class="tour-section">
+                <div class="content-section">
+                    <h2 class="section-heading text-white">THIẾT BỊ SỰ KIỆN NỔI BẬT</h2>
+                    <!-- <p class="section-sub-heading text-white">Công ty chuyên cho thuê âm thanh, ánh sáng, màn hình led sự kiện</p> -->
+                    <!-- <ul class="ticket-list">
+                            <li>September <span class="sold-out">Sold out</span></li>
+                            <li>October <span class="sold-out">Sold out</span></li>
+                            <li>November <span class="quantity">3</span></li>
+                        </ul> -->
+
+                    <!-- Places Địa điểm -->
+
+                    <div class="places-list">
+                        <a href="Cntt.html">
+                            <div class="colum colum-three s-colum-full mt-16">
+                                <img src="https://hoangsaviet.com.vn/datafiles/3/images/thumb_1700106475_7073_thi-cong-backdrop-su-kien5.webp"
+                                    alt="New York" class="place-img">
+                                <div class="place-body">
+                                    <h3 class="place-heading">THI CÔNG BACKDROP SỰ KIỆN</h3>
+                                    <!-- <p class="place-time">Fri 05 Nov 2017</p> -->
+                                    <!-- <div class="place-desc">Dựa trên Báo cáo về thị trường IT Việt Nam 2021 hiện nay của TopDev, tính  đến năm 2025 Việt Nam sẽ còn cần đến 450.000  nhân lực trong ngành công nghệ thông tin.</div> -->
+                                    <!-- <button href="#" class="btn js-buy-ticket s-full-width ">Buy Tickets</button> -->
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="colum colum-three s-colum-full mt-16">
+                            <img src="https://hoangsaviet.com.vn/datafiles/3/images/thumb_1692515812_8518_man-hinh-led-outdoor.webp"
+                                alt="Paris" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">MÀN HÌNH LED OUTDOOR</h3>
+                                <!-- <p class="place-time">Fri 09 Nov 2021</p> -->
+                                <!-- <div class="place-desc">Việt Nam sẽ có khoảng 2,5 triệu lao động làm trong ngành du lịch, mang lại doanh thu khoảng 35 tỷ USD. Tuy nhiên khó khăn hiện nay là thiếu lao động Việt Nam lành nghề.  </div> -->
+                                <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                            </div>
+                        </div>
+
+                        <div class="colum colum-three s-colum-full mt-16">
+                            <img src="https://hoangsaviet.com.vn/datafiles/3/images/thumb_1692950558_5034_den-beam.webp"
+                                alt="Viet Nam" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">ĐÈN MOVING HEAD BEAM</h3>
+                                <!-- <p class="place-time">Fri 05 Nov 2017</p> -->
+                                <!-- <div class="place-desc"> Ngành Kỹ thuật xây dựng đang thu hút sự quan của nhiều bạn trẻ trong thời gian gần đây. Bài viết sẽ giới thiệu đến các bạn những thông tin tổng quan về ngành học thú vị này.</div> -->
+                                <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                            </div>
+                        </div>
+
+                        <div class="colum colum-three s-colum-full mt-16">
+                            <img src="https://hoangsaviet.com.vn/datafiles/3/images/thumb_1690594105_8467_standee-led.webp"
+                                alt="Paris" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">STANDEE LED</h3>
+                                <!-- <p class="place-time">Fri 09 Nov 2021</p> -->
+                                <!-- <div class="place-desc">Ngành toán kinh tế ra đời để đáp ứng nhu cầu nhân lực cho yếu tố dữ liệu lớn (Big Data) của cách mạng công nghiệp 4.0. Phó thủ tướng Vũ Đức Đam nhận định cách mạng công nghiệp lần thứ 4 tạo ra nguy cơ mất lao động. </div> -->
+                                <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                            </div>
+                        </div>
+
+                        <div class="colum colum-three s-colum-full mt-16">
+                            <img src="https://hoangsaviet.com.vn/datafiles/banners/1691070782_8877_san-khau-1.webp"
+                                alt="Paris" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">MÀN HÌNH LED INDOOR</h3>
+                                <!-- <p class="place-time">Fri 09 Nov 2021</p> -->
+                                <!-- <div class="place-desc">Trong phát triển ngành y tế, bên cạnh việc xây dựng khung khổ pháp lý thống nhất; xây dựng mạng lưới y tế ; đầu tư nguồn lực tài chính một cách thỏa đáng để ngành y tế có thể làm tốt việc chăm sóc sức khỏe cộng đồng </div> -->
+                                <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                            </div>
+                        </div>
+
+                        <div class="colum colum-three s-colum-full mt-16">
+                            <img src="https://hoangsaviet.com.vn/datafiles/3/images/thumb_1700034388_8368_cho-thue-bo-dieu-khien-perfect-cue7.webp"
+                                alt="Paris" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">BỘ PERFECT CUE</h3>
+                                <!-- <p class="place-time">Fri 09 Nov 2021</p> -->
+                                <!-- <div class="place-desc">Nhu cầu lao động trong ngành marketing tại Việt Nam đang tăng mạnh trong thời kỳ cách mạng công nghệ 4.0. Bởi vậy, hiện nay ngành marketing là một trong những ngành nghề đang thiếu hụt nhân lực hiện nay</div> -->
+                                <!-- <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+
+
+
+                <!-- End Places Địa điểm -->
+            </div>
+        </div>
+        <!-- End Tour -->
+
+        <!-- Contact -->
+        <div id="contact" class="content-section">
+            <h2 class="section-heading">LIÊN HỆ TƯ VẤN</h2>
+            <p class="section-sub-heading">Liên hệ với chúng tôi</p>
+
+            <div class="row contact">
+                <!-- Chứa thông tin liên hệ -->
+                <!-- s-colum-full thêm khi thiết kế mobile -->
+                <div class="colum colum-tow s-colum-full contact-info">
+                    <p><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515"> +84 365049547</a></p>
+                    <p><i class="ti-email"></i> Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
+                </div>
+                <div class="colum colum-tow s-colum-full contact-form">
+                    <form action="">
+                        <div class="row">
+
+                            <div class="colum colum-tow s-colum-full">
+                                <!-- Required thông báo nhập thông tin cho form -->
+                                <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                            </div>
+                            <!-- smt8 and sfull-width thêm khi thiết kế mobile -->
+                            <div class="colum colum-tow s-colum-full s-mt-8">
+                                <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="colum colum-tow s-colum-full">
+                                <!-- Required thông báo nhập thông tin cho form -->
+                                <input type="text" name="" placeholder="phone number" required id=""
+                                    class="form-control">
+                            </div>
+                            <!-- smt8 and sfull-width thêm khi thiết kế mobile -->
+                            <div class="colum colum-tow s-colum-full s-mt-8">
+                                <select class="form-control">
+                                    <option value="0">Dịch vụ 1</option>
+                                    <option value="1">Dịch vụ 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-8">
+                            <div class="colum colum-full">
+                                <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                            </div>
+                        </div>
+                        <input class="float-right btn mt-16 s-full-width" type="submit" value="Gửi">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Contact -->
+    </div>
+    <!-- Content -->
+    {% endblock %}
+</body>
+
+</html>

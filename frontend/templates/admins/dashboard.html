@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="your-style.css">
+    <!-- Thêm Bootstrap CSS nếu bạn chưa có -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy12q00S7w5p5ZB/Zb3Q6tJO3GU5i6WPE" crossorigin="anonymous">
+    <title>Your Page Title</title>
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div id="dashboard">
+        <div id="left_content" class="dashboard_menu">
+            <div id="box_id_left">
+                <div id="title_left_content">
+                    <p class="account_name">
+                        <img src="https://hoangsaviet.com.vn/datafiles/avatar/thumb_1705723605_9039_tai-xuong.jpg"
+                            alt="Nguyễn Trần Luân" title="Nguyễn Trần Luân" width="100" height="auto"> Nguyễn Trần Luân
+                    </p>
+                </div>
+                <div id="menu_left">
+                    <ul class="active">
+                        <li class="cata_name"><a href="#manage-users"><i
+                                    class="fa fa-users rong16 marginright5 color2" aria-hidden="true"></i> Quản lý người
+                                dùng</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="#manage-products"><i
+                                    class="fa fa-shopping-bag rong16 marginright5 color2" aria-hidden="true"></i> Quản lý
+                                sản phẩm</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="#manage-orders"><i
+                                    class="fa fa-shopping-cart rong16 marginright5 color2" aria-hidden="true"></i> Quản lý
+                                đơn hàng</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="#manage-discounts"><i
+                                    class="fa fa-percent rong16 marginright5 color2" aria-hidden="true"></i> Quản lý mã giảm
+                                giá</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cata_name"><a href="#logout"><i
+                                    class="fa fa-power-off rong16 marginright5 color2" aria-hidden="true"></i> Đăng xuất</a>
+                            <div class="clr"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="right_content">
+            <!-- Nội dung trang -->
+            <div id="manage-users">
+                <h2>Quản lý người dùng</h2>
+                <!-- Thêm nội dung quản lý người dùng ở đây -->
+            </div>
+            <div id="manage-products">
+                <h2>Quản lý sản phẩm</h2>
+                <!-- Thêm nội dung quản lý sản phẩm ở đây -->
+            </div>
+            <div id="manage-orders">
+                <h2>Quản lý đơn hàng</h2>
+                <!-- Thêm nội dung quản lý đơn hàng ở đây -->
+            </div>
+            <div id="manage-discounts">
+                <h2>Quản lý mã giảm giá</h2>
+                <!-- Thêm nội dung quản lý mã giảm giá ở đây -->
+            </div>
+            <div id="logout">
+                <h2>Đăng xuất</h2>
+                <!-- Thêm nút đăng xuất và xử lý đăng xuất ở đây -->
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+</body>
+
+</html>
+
+    {% endblock %}
+</body>
+
+</html>

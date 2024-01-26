@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web đầu đời</title>
+    <link rel="icon"
+        href="https://banner2.cleanpng.com/20180702/pib/kisspng-padlock-computer-icons-door-5b39afd1a7f338.2180260915305072176879.jpg"
+        type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="./asset/css/responsive.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='font/style.css')}}">
+    
+</head>
+
+<body>
+    <!-- Xây móng-->
+    <div id="main">
+        {% block header %}
+        <!-- Xây dựng Header -->
+        <div id="header">
+            <!-- Nhóm 1: Menu và Mobile Menu -->
+            <div class="menu-group">
+                <!-- Bắt đầu Menu -->
+                <ul id="menu">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#band">Giới thiệu</a></li>
+                    <li><a href="#tour">Tổ chức sự kiện</a></li>
+                    <li><a href="#tour1">Cho thuê thiết bị</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+                <!-- Kết thúc Menu -->
+
+                <!-- Mobile sau thiết kế -->
+                <div id="mobile-menu" class="mobile-menu-btn">
+                    <i class="menu-icon ti-menu"></i>
+                </div>
+            </div>
+            <!-- Kết thúc Nhóm 1 -->
+
+            <!-- Nhóm 2: Nút Login và Icon -->
+            <div class="login-group">
+                {% if 'username' in session %}
+                <!-- Hiển thị hình ảnh người dùng sau khi đăng nhập -->
+                <div id="user-info">
+                    <img src="{{ user_image }}" alt="{{ session['username'] }}">
+                    <span>{{ session['username'] }}</span>
+                </div>
+                <div id="logout-btn">
+                    <a href="/logout">Đăng xuất</a>
+                </div>
+                {% else %}
+                <!-- Icon Bên Phải -->
+                <div id="icon-right">
+                    <a href="{{ url_for('account') }}"><i class="fa-solid fa-user"></i></a>
+                </div>
+                <!-- End Icon Bên Phải -->
+                {% endif %}
+            </div>
+
+        </div>
+        <!-- End Xây dựng Header -->
+        {% endblock %}
+
+        {% block slider %}
+        <!-- Xây dựng slider -->
+        <!-- End Xây dựng slider -->
+        {% endblock %}
+
+        {% block content %}
+        <!-- Content -->
+        <!-- Content -->
+        {% endblock %}
+        {% block footer %}
+        <!-- Footer -->
+        <div id="footer">
+            <div class="Network-list">
+                <!-- <a href="https://www.facebook.com/mit.xe.94/"><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-printer"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+                <a href=""><i class="ti-youtube"></i></a> -->
+                <div class="infocolum1">
+                    <h4 class="footer_heading">Thông Tin Liên Hệ</h4>
+                    <ul class="thongtin">
+                        <li>Văn Phòng Tại Bình Định</li>
+                        <li>Địa Chỉ: Đại Học Quy Nhơn</li>
+                        <li>Hotline: 0365049547</li>
+                        <li>Email: Trankyvan08@gmail.com</li>
+                    </ul>
+
+                </div>
+                <div class="infocolum2">
+                    <h4 class="footer_heading">Chia Sẻ Mạng Xã Hội</h4>
+                    <ul class="mxh">
+                        <li>Facebook</li>
+                        <li>Youtobe</li>
+                        <li>Google+</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+                <div class="infocolum3">
+                    <h4 class="footer_heading">Danh Mục Nguồn Nhân Lực</h4>
+                    <ul class="danhmuc">
+                        <li>Công nghệ thông tin</li>
+                        <li>Du lịch khách sạn</li>
+                        <li>Y-Dược</li>
+                        <li>Kỹ thuật xây dựng</li>
+                        <li>Toán ứng dụng</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        {% endblock %}
+    </div>
+    <!-- End Xây móng-->
+
+    <!-- Giao diện bật lên Modal -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="modal-icon ti-bag"></i>
+                Tickets
+            </header>
+
+            <div class="modal-body">
+                <label for="quantity" class="modal-lable">
+                    <!-- Tác dụng của For Khi nhấn vào lable thì tự động chuột for đến input -->
+                    <i class="ti-shopping-cart"></i>
+                    Ticket, $15 per person
+                </label>
+                <input id="quantity" type="text" class="modal-input" placeholder="How many ?">
+
+                <label for="email" class="modal-lable">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input id="email" type="email" class="modal-input" placeholder="Enter email...">
+
+                <button id="buy-tickets">
+                    Pay <i class="ti-check"></i>
+                </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need help ? <a href="">help ?</a></p>
+            </footer>
+        </div>
+    </div>
+    <!-- End Giao diện bật lên Modal -->
+
+    <script>
+        // Lấy tất cả class js-buy-ticket lưu vào biến buyBtns
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        // Lấy một class js-modal truyền cho biến modal
+        const modal = document.querySelector('.js-modal')
+        // Lấy một class js-modal-close truyền cho biến modalClose
+        const modalClose = document.querySelector('.js-modal-close')
+
+        const modalContainer = document.querySelector('.js-modal-container')
+
+        // Hàm hiển thị Modal thêm class open vào Modal 
+        function showBuytickets() {
+            // alert dùng để bật hộp thoại trên trình duyệt alert("Anh văn")
+            modal.classList.add('open')
+        }
+        // Hàm ẩn Modal  
+        function hideBuytickets() {
+            // alert dùng để bật hộp thoại trên trình duyệt alert("Anh văn")
+            modal.classList.remove('open')
+        }
+
+        // Tạo biến mới có tên là btnBtn lưu lần lượt 3 nút buyBtns
+        // Sử dụng for khi duyệt qua danh sách document.querySelectorAll
+        for (const buyBtn of buyBtns) {
+            //  Tạo lắng nghe từ người dùng 
+            buyBtn.addEventListener('click', showBuytickets)
+        }
+        //  Tạo lắng nghe từ người dùng ở button close
+        modalClose.addEventListener('click', hideBuytickets)
+
+        //  Tạo lắng nghe từ người dùng ở vị trí bất kỳ 
+        modal.addEventListener('click', hideBuytickets)
+
+        // Ngừng lắng nghe click từ thẻ Container
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+
+    <script>
+        //  Lấy id header , mobile-menu
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHieght = header.clientHeight;
+
+        //  Tạo lắng nghe từ người dùng Đóng/ mở mobile menu
+        mobileMenu.onclick = function () {
+            var isClose = header.clientHeight === headerHieght;
+            if (isClose) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // Tự động đóng khi chọn phần tử trong menu
+        var menuItems = document.querySelectorAll('#menu li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function (event) {
+                var isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.classList.contains('submenu');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/d6f5bb623d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

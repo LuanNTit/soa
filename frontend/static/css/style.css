@@ -1,0 +1,925 @@
+/* Reset CSS  */
+/* ID dùng # , Class dùng . */
+/* Emment */
+
+#main {
+    
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+html{ 
+    scroll-behavior: smooth ;  /* Hành động cuộn-hành vi khi bấm vào các Content */
+    font-family: Arial, Helvetica, sans-serif; /* Set font chữ cho Web */
+}
+
+/*
+1.Từ ngoài vào trong
+2.Từ trên xuống dưới 
+3.Tổng quan đến chi tiết 
+ */
+/* 
+1.Vị trí
+2.Kích thước (Rộng(Width), Cao(Height))
+3.Màu sắc
+4.Kiểu dáng ( kiểu chữ , tròn, vuông...)
+*/
+/* Class dùng chung */
+.clear{
+    clear: both;
+}
+.text-white{
+    color: #fff !important;    /* Ưu tiên */
+}
+
+.text-center{
+    text-align: center !important; /* Ưu tiên sau này dùng chung đều căn giữa */
+}
+
+.float-right{
+    float: right !important;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* element giả */
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none; /* Bỏ gạch chân */
+    padding: 12px 14px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.colum{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: black;
+    line-height: none;
+}
+
+.colum-full{
+    width: 100%;
+}
+
+.colum-tow{
+    width: 50%;
+}
+.colum-three{
+    width: calc(100%/3);
+}
+
+.mt-8{
+    margin-top: 8px !important; 
+}
+
+.mt-16{
+    margin-top: 16px !important; 
+}
+/* Class dùng chung */
+
+
+#header{
+    top: 0;
+    left: 0;
+    right: 0;  /* Bám sát lề */
+    height: 46px;
+    background-color: rgb(0, 0, 0);
+    position: fixed; /* Giữ header ở top khi lăn trang */
+    z-index: 1;  /*giữ header nổi */
+    /* Sau khi thiết kế */
+    /* overflow: hidden;  Thêm thẻ overflow:hidden để ẩn các thẻ côn của thẻ cha trên Mobile */
+   
+    
+}
+
+        /* Thêm CSS để tối ưu hóa kích thước của phần hiển thị khi chưa đăng nhập */
+        .login-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    
+        #login-form {
+            display: flex;
+            gap: 10px;
+        }
+    
+        /* Hiển thị hình ảnh người dùng và nút đăng xuất khi đã đăng nhập */
+        #user-info img {
+            width: 30px; /* Điều chỉnh kích thước hình ảnh người dùng */
+            height: 30px;
+            border-radius: 50%; /* Làm tròn hình ảnh */
+        }
+    
+        #user-info span {
+            position: absolute;
+            margin-top: 50px;
+            font-size: 14px;
+            /* display: flex; */
+            margin-left: 5px;
+            align-items: flex-start;
+            top: -35px;
+            right: 132px;
+        }
+    
+        #logout-btn a {
+            font-size: 14px; /* Điều chỉnh kích thước văn bản */
+            color: #fff;
+            text-decoration: none;
+        }
+
+.login-text {
+    color: #f2f2f2;
+}
+
+#menu{
+    display: inline-block;
+}
+
+#menu, .submenu{
+    list-style-type: none ;
+  
+}
+
+#menu > li{
+    display: inline-block; /* Trên cùng một hàng và inline-block cho set Width và Height*/
+}
+
+#menu li{
+    position: relative;
+}
+
+#menu > li > a{
+    text-transform: uppercase; /* Viết chữ hoa */
+    color: #fff;
+}
+
+#menu li a{
+    text-decoration: none; /* Bỏ gạch chân */
+    line-height: 46px; /* Căn giữa header */
+    padding: 0 24px; /* Trên dưới 0 , Trái phải 24px */
+    display:  block; 
+
+}
+
+#menu li:hover .submenu{
+    display: block;
+}
+
+#menu > li:hover > a,
+#menu .submenu li:hover {
+    color: rgb(13, 13, 14);
+    background-color: #ccc;
+}
+
+
+#menu .submenu{
+    display: none; /*Ẩn phần con*/
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(0,0,0.3);  /* Tạo bóng đổ */
+}
+
+#menu .submenu a{
+    padding: 0 12px;
+    color: #000;
+    line-height: 38px;
+}
+ 
+#menu .menu-arrow-down{
+    font-size: 12px;   /* Mặc định font là 16px */
+  
+}
+
+/* Start Header */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Thay đổi màu nền theo ý bạn */
+    padding: 10px 20px;
+    color: white;
+}
+
+.menu-group {
+    display: flex;
+    align-items: center;
+}
+
+.login-group {
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#menu li {
+    margin-right: 20px;
+}
+
+#mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+#login-btn {
+    margin-right: 5px; /* Giảm khoảng cách với icon */
+}
+
+#icon-right {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 5px; /* Giảm khoảng cách với nút login */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    #mobile-menu {
+        display: block;
+    }
+}
+
+
+/* End Header */
+
+/* Mobile sau thiết kế */
+#header .mobile-menu-btn{
+    float: right;
+    padding: 0 21px;
+/* Mobile sau thiết kế */
+    position: absolute;
+    top:0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;   
+    cursor: pointer; /* Thay đổi hình dạng cho chuột */ 
+}
+
+/* Sau khi hover thì nó set lại icon màu đen */
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+
+#header .menu-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px; 
+}
+/* Mobile sau thiết kế */
+
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover{
+    background-color: #f44;   
+    cursor: pointer; /* Thay đổi hình dạng cho chuột */ 
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%; /* Chiều cao luôn bằng 50% kích thước chiều rộng của trình duyệt*/
+    background: url('https://bizflyportal.mediacdn.vn/bizflyportal/2567/5528/2023/03/15/23/37/thiet-ke-3d-cho-su-kien-1-16788766372163.jpg') top center / cover no-repeat;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    /* left: 50%; */
+    color: rgb(255, 255, 255);
+    /* transform: translateX(-50%); */
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+#slider .text-heading{
+    font-weight:200; /*Giảm độ dày của chữ*/
+    font-size: 40px;
+    letter-spacing: 4px;
+    /* text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2); */
+    /* letter-spacing: 0.5em; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+
+}
+
+#slider .text-desription{
+    font-size: 25px;
+    margin-top: 25px;
+    letter-spacing: 3px;
+}
+
+#content .content-section{
+    padding: 64px 0 112px; /* Trên dưới 64 trái phải - 0 dưới 112 */
+    width: 800px; 
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: auto; margin-right: auto;  Kết hợp đẩy về giữa  */
+   
+    /* Tablet */
+    padding-left: 16px;
+    padding-right: 16px;
+    /* Tablet */
+}
+
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500px;
+    text-align: center;
+    letter-spacing: 4px;  /* Khoảng cách giữa kí tự */
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;  /* Đẩy khảng cách */
+    font-style: italic; /* kiểu Chữ nghiêng */
+    opacity: 0.6; /* Làm mờ độ trong suốt  có giá trị từ 0-1*/
+}
+ 
+#content .about-text{
+    font-size: 15px;
+    margin-top: 23px;
+    text-align: justify; /* Căn đều 2 lề */
+    line-height: 1.6; /* khoảng cách giữa các dòng */
+}
+
+#content .members-list{  
+    margin-top: 47px;  /* Thành phần trên + thành phần dưới khoảng cách ra*/
+    /* overflow: hidden;     Ôm thẻ con */
+}
+/* #content .member-item {
+    /* Kế thừa colum , text-center class dùng chung */
+    /* float: left;    Sang trai tren cung dong */  
+    /* width: calc(100%/3); */
+    /* text-align: center; */ 
+ */
+
+#content .member-name{
+    font-size: 15px;
+}
+
+#content .member-img{
+    margin-top: 15px;  
+    width: 154px;
+    border-radius: 8px;     /* Bo góc ảnh */
+
+}
+
+/* Tour-section */
+.tour-section {
+    background-color: #000000;
+}
+/* Tour-section */
+
+.ticket-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+ .ticket-list li{
+     color: #757575;
+     font-size: 15px;
+     padding: 11px 16px;
+     border-bottom: 1px solid #ddd;
+ }
+
+ .ticket-list .sold-out{
+    background-color: #f44366;
+    color: #fff;
+    padding: 3px 4px;   /* Trên dưới */
+    margin-left: 16px;
+ }
+ 
+ .ticket-list .quantity{
+     float: right;   /* Đối tượng sang phải */
+     width: 24px;
+     height: 24px;
+     background-color: #000;
+     color: #fff;
+     border-radius: 50%;   /* Bo góc*/
+     text-align: center;
+     line-height: 24px;
+     margin-top: -3px;
+
+}
+
+/* Place */
+.places-list{
+    /* Thiết kế mobile sửa lại 16 */
+    margin-top: 16px;
+
+    /* margin-left: -9px; */  
+    /* margin-right: -9px; */ 
+    /* margin-bottom: 112px; */
+}
+
+/* kế thừ colum-three */
+/* .place-item{ */
+    /* float: left; Đưa lên cùng một hàng ngang  */  /* Kế thừa colum */
+    /* width: calc(100%/3);  */
+    /* padding: 0px 8px; Trái phải 8px  */ /* Kế thừa colum */
+/* } */
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-heading {
+    text-align: center;
+}
+
+.place-desc{
+    margin-top: 15px;
+}
+.place-img{
+    width: 100%; /* Cho chiều rộng 100% để bằng với thẻ div */
+    height: 150px;
+    display: block;
+    
+}
+
+.mt-16:hover{
+    opacity: 0.7;
+}
+
+
+.place-body{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+    height: 60px;
+}
+
+/* Moadal */
+.modal{
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background:rgba(0,0,0,0.4);
+   display: none; /* Ẩn Modal, Flex là hiện */
+   align-items: center; /* Nằm giữa chiều dọc */
+   justify-content: center; /* Nằm giữa chiều ngang */
+}
+
+.modal-container{
+    background: #fff;
+    width: 900px;
+    min-height: 300px; /* Chiều cao tối thiểu */
+    position: relative;
+    max-width: calc(100% - 32px);
+    animation: modalFadeIn ease 0.7s;
+}
+
+.modal-header{
+    background: #009688;   
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff; 
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    opacity: 0.8;     /* Làm mờ */
+
+}
+
+.modal-close:hover{
+    opacity: 0.9;
+}
+
+.modal-icon{
+    margin-right: 15px;
+} 
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-lable{
+    display: block;  /* Nằm từng hàng riêng */
+    font-size: 15px;
+    margin-bottom: 12px;
+
+}
+
+.modal-input{
+    border: 1px solid rgb(64, 61, 61);
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets{
+    background: #009688;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+#buy-tickets:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.modal-footer{
+    padding: 16px;
+    text-align: right;
+}
+.modal.open{
+    display: flex;
+}
+/* Modal */
+
+.contact{
+    padding-top: 48px;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;  /* Khoảng cách giữa các dòng */
+}
+
+.contact-info i[class*="ti-"]{
+    display: inline-block;  /* Cho set With và Height */
+    width: 30px;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+    background: url('https://i2.wp.com/mftgroup.com.ph/wp-content/uploads/2018/02/footer-background-image.jpg?ssl=1')top center / cover no-repeat;
+    height: 300px;
+    
+}
+
+#footer .Network-list{
+    font-size: 24px;
+
+}
+
+#footer .Network-list a{
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+
+}
+
+#footer .copyright a:hover,
+#footer .Network-list a:hover{
+    color: rgba(0,0,0,0.3);
+}
+
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0,0,0,0.6);
+}
+
+#footer .copyright a{
+    color: rgba(0,0,0,0.6);
+}
+/* Tạo chuyển động hoạt hình */
+@keyframes modalFadeIn{
+    from{
+        transform: translateY(-140px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.cntt__document{
+
+    width: 62%;
+    padding-left: 14%;
+    border: 2px solid #fbfbfb;    
+
+}
+.all__data{
+    display: flex;
+}
+
+.header__cntt-main{
+    margin-top: 80px;
+    margin-bottom: 8px;
+    
+}
+.cntt__timeline{
+    color: #757575;
+    margin-bottom: 6px;
+}
+.cntt__summary{
+    font-weight: 700;
+    text-indent: 8px;
+}
+.img__cntt{
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.img__cntt-first{
+    border-radius: 2px;
+    margin-top: 5px;
+    height: auto;
+    width: 100%;
+    
+
+}
+.cntt__h4{
+    margin: 15px 0   ;
+}
+.cntt__p{
+    margin: 12px 0;
+}
+.notify__linked{
+   width: 30%;
+   margin-left: 6%;
+   margin-top: 80px;
+   /* position: absolute;
+   z-index: 1; */
+   
+   
+}
+.notify__linked-short-term{
+    border: 2px solid  #7b7676 ;
+
+}
+.notify__linked-short{
+    text-align: center;
+    padding: 5px 0;
+    background-color: #f2f2f2;
+}
+.notify__linked-short-img{
+    width: 35%;
+    height: 35%;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.notify__linked-short-trans{
+    display: flex;
+}
+.notify__linked-short-trans:hover{
+    background-color: #6e6666;   
+    cursor: pointer;
+}
+.notify__linked-short-in4{
+    padding: 0 5px;
+    margin-top: 10px;
+    display: block;
+}
+.notify__linked-short-in4-mini{
+    display: block   ;
+    padding: 0 5px;
+}
+.notify__linked-short-select{
+    text-decoration: none;
+    color: #000;
+}
+
+/* Footer */
+.Network-list{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.footer_heading{
+    color: #009688;
+    font-style: italic;
+    line-height: 45px;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#footer ul{
+    list-style-type: none;
+    color: #fff;
+    line-height: 30px;
+    font-size: 13px;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Quan ly tai khoan ca nhan */
+#account {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#left_content {
+    width: 25%;
+}
+
+#right_content {
+    width: 70%;
+}
+
+#box_id_left {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#title_left_content {
+    text-align: center;
+}
+
+.account_name img {
+    border-radius: 50%;
+}
+
+#menu_left ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu_left ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+#menu_left ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+#menu_left ul li a i {
+    margin-right: 5px;
+}
+
+#menu_left ul li:hover {
+    background-color: #e0e0e0;
+}
+
+.clr {
+    clear: both;
+}
+
+#right_content p {
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Login */
+.login-container {
+    margin: 10% auto;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    margin: 0;
+}
+
+/* Detail blog */
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Dashboard */
+#dashboard {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px; /* Duy trì khoảng cách giữa header và dashboard */
+}
+
+#left_content {
+    width: 25%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+#right_content {
+    flex: 1;
+    padding: 20px;
+}
+
+.account_name img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dashboard_menu {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard_menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard_menu ul li {
+    margin-bottom: 10px;
+}
+
+.active {
+    font-weight: bold;
+}
+
+/* Add more styles for each section as needed */
+#manage-users,
+#manage-products,
+#manage-orders,
+#manage-discounts,
+#logout {
+    display: none;
+}
+
+/* Style for content sections */
+h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
